@@ -19,22 +19,30 @@ def PlayerInformation():#*This method will receive the most basic player informa
     PlayerFile.write("CLASS: " + Profession.upper() + '\n')
     time.sleep(.5)
     if Profession.upper() == "MAGE": #*These set of if-statements assigns different values to the player's stats depending on what class the user inputs.
-        for StatName in ["ATTACK", "DEFENSE", "SPEED", "CRITICAL HIT CHANCE", "CRITICAL HIT DAMAGE"]:
-            if StatName == "ATTACK":
-                PlayerFile.write(StatName + ":" + " " + "2" + "\n")
+        for StatName in ["MAX_HP","ATTACK", "DEFENSE", "SPEED", "CRITICAL_HIT_CHANCE", "CRITICAL_HIT_DAMAGE", "MAGIC_RESIST"]:
+            if StatName == "MAGIC_RESIST":
+                PlayerFile.write(StatName + ":" + " " + "3" + "\n")
+            elif StatName =="MAX_HP":
+                PlayerFile.write(StatName + ":" + " " + "100" + "\n")
             else:
                 PlayerFile.write(StatName + ":" + " " + "1" + "\n")
 
     elif Profession.upper() =="ARCHER":
-        for StatName in ["ATTACK", "DEFENSE", "SPEED", "CRITICAL HIT CHANCE", "CRITICAL HIT DAMAGE"]:
-            if StatName == "ATTACK":
+        for StatName in ["MAX_HP", "ATTACK", "DEFENSE", "SPEED", "CRITICAL_HIT_CHANCE", "CRITICAL_HIT_DAMAGE", "MAGIC_RESIST"]:
+            if StatName == "CRITICAL_HIT_CHANCE":
                 PlayerFile.write(StatName + ":" + " " + "2" + "\n")
+            elif StatName =="MAX_HP":
+                PlayerFile.write(StatName + ":" + " " + "100" + "\n")
             else:
                 PlayerFile.write(StatName + ":" + " " + "1" + "\n")
     elif Profession.upper() =="WARRIOR":
-        for StatName in ["ATTACK", "DEFENSE", "SPEED", "CRITICAL HIT CHANCE", "CRITICAL HIT DAMAGE"]:
-            if StatName == "ATTACK":
+        for StatName in ["MAX_HP","ATTACK", "DEFENSE", "SPEED", "CRITICAL_HIT_CHANCE", "CRITICAL_HIT_DAMAGE", "MAGIC_RESIST"]:
+            if StatName == "ATTACK" or StatName == "DEFENSE":
                 PlayerFile.write(StatName + ":" + " " + "2" + "\n")
+            elif StatName =="SPEED":
+                PlayerFile.write(StatName + ":" + " " + "0" + "\n")
+            elif StatName =="MAX_HP":
+                PlayerFile.write(StatName + ":" + " " + "100" + "\n")
             else:
                 PlayerFile.write(StatName + ":" + " " + "1" + "\n")  
     #IFLoadGame
@@ -42,7 +50,7 @@ def PlayerInformation():#*This method will receive the most basic player informa
 
 def SaveEquipment():
     pass
-    os.
+    #os.path()
 def SaveState():
     pass
 def SaveInventory():
