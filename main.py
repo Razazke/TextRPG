@@ -1,6 +1,7 @@
 import random
 import time
 import math
+import os
 
 def PlayerInformation():#*This method will receive the most basic player information needed to make the game properly work.
     #IFNewGame
@@ -17,7 +18,7 @@ def PlayerInformation():#*This method will receive the most basic player informa
     Profession = input("Which class would you like to pick? Warrior, Mage, Archer?:")
     PlayerFile.write("CLASS: " + Profession.upper() + '\n')
     time.sleep(.5)
-    if Profession.upper() == "MAGE": #*These set of if-statements assigns different values to the player's stats depending on what class the user inputs
+    if Profession.upper() == "MAGE": #*These set of if-statements assigns different values to the player's stats depending on what class the user inputs.
         for StatName in ["ATTACK", "DEFENSE", "SPEED", "CRITICAL HIT CHANCE", "CRITICAL HIT DAMAGE"]:
             if StatName == "ATTACK":
                 PlayerFile.write(StatName + ":" + " " + "2" + "\n")
@@ -41,6 +42,7 @@ def PlayerInformation():#*This method will receive the most basic player informa
 
 def SaveEquipment():
     pass
+    os.
 def SaveState():
     pass
 def SaveInventory():
